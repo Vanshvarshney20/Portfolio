@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vansh Varshney - Aspiring Software Developer portfolio.">
+  <title>Vansh Varshney | Aspiring Software Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="mouse-light" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <a class="logo magnetic" href="#home" aria-label="Vansh home">VANSH</a>
+    <button class="menu-toggle magnetic" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#certifications">CERTIFICATIONS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <!-- PERSONAL INFORMATION -->
+        <p class="eyebrow reveal-text">ASPIRING SOFTWARE DEVELOPER</p>
+        <h1 class="hero-title" aria-label="Vansh Varshney">
+          <span>VANSH</span>
+          <span>VARSHNEY</span>
+        </h1>
+        <p class="hero-description reveal-up">Building software, solving problems, and exploring modern technology.</p>
+        <a class="scroll-cue magnetic" href="#about">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="hero-visual" id="hero-visual" aria-hidden="true">
+        <canvas id="sphere-canvas"></canvas>
+        <div class="orb-ring ring-one"></div>
+        <div class="orb-ring ring-two"></div>
+        <div class="orb-ring ring-three"></div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-kicker reveal-up">ABOUT ME</div>
+      <div class="about-grid">
+        <p class="about-statement reveal-text">
+          As an aspiring Software Developer with strong programming skills, problem-solving ability, and modern
+          development expertise, I am passionate about building scalable, user-focused solutions and contributing
+          creatively to a dynamic organization.
+        </p>
+        <div class="about-cards">
+          <article class="tilt-card reveal-up">
+            <span class="card-index">01</span>
+            <h3>EDUCATION</h3>
+            <p>GLA University</p>
+            <strong>Graduation - Pursuing</strong>
+          </article>
+          <article class="tilt-card reveal-up">
+            <span class="card-index">02</span>
+            <h3>ROLE</h3>
+            <p>Aspiring Software Developer</p>
+            <strong>Creative problem solver</strong>
+          </article>
+          <article class="tilt-card reveal-up">
+            <span class="card-index">03</span>
+            <h3>LOCATION</h3>
+            <p>Sambhal, Uttar Pradesh, India</p>
+            <strong>Open to opportunities</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="section-head">
+        <div class="section-kicker reveal-up">SKILLS</div>
+        <h2 class="section-title reveal-text">Signal over noise.</h2>
+      </div>
+      <div class="skill-wall" aria-label="Core skills">
+        <!-- SKILLS -->
+        <button class="skill-chip magnetic" type="button">Analytical Thinking</button>
+        <button class="skill-chip magnetic" type="button">Leadership</button>
+        <button class="skill-chip magnetic" type="button">Problem Solving</button>
+        <button class="skill-chip magnetic" type="button">Teamwork</button>
+        <button class="skill-chip magnetic" type="button">Time Management</button>
+      </div>
+      <div class="technical-section">
+        <div class="technical-header reveal-up">
+          <h3>TECHNICAL SKILLS</h3>
+          <span class="technical-tagline">Engineered for performance & precision</span>
+        </div>
+
+        <div class="tech-grid">
+          <!-- Programming -->
+          <article class="tilt-card tech-card reveal-up">
+            <div class="tech-card-head">
+              <div class="tech-card-title-group">
+                <div class="tech-category-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="card-index">01</span>
+                  <h4>Programming</h4>
+                </div>
+              </div>
+              <span class="tech-card-badge">4 Skills</span>
+            </div>
+            <div class="tech-skills-list">
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 1 0 0 8"></path>
+                  <line x1="12" y1="12" x2="12.01" y2="12"></line>
+                </svg>
+                <span>C</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6 16c4 1.5 8 1.5 12 0"></path>
+                  <path d="M5 20c6 2 10 2 14 0"></path>
+                  <path d="M10 11c-1-3 1-5 2-7 0 2 1 3 0 4"></path>
+                  <path d="M14 10c-1-2 1-4 1-6 0 1 1 2 0 3"></path>
+                </svg>
+                <span>Java</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M11.9 2c-3.1 0-5 1.5-5 3.3v2.1h5.1v.7H4.5C2.7 8.1 2 9.9 2 12s.7 3.9 2.5 3.9h1.6v-2.2c0-1.8 1.5-3.3 3.3-3.3h5.2c1.4 0 2.5-1.1 2.5-2.5V5.3c0-1.8-1.9-3.3-5.2-3.3zm-1.8 1.4c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm1.9 18.6c3.1 0 5-1.5 5-3.3v-2.1h-5.1v-.7h7.5c1.8 0 2.5-1.8 2.5-3.9s-.7-3.9-2.5-3.9h-1.6v2.2c0 1.8-1.5 3.3-3.3 3.3H9.1c-1.4 0-2.5 1.1-2.5 2.5v2.6c0 1.8 1.9 3.3 5.2 3.3zm1.8-1.4c-.4 0-.7-.3-.7-.7s.3-.7.7-.7.7.3.7.7-.3.7-.7.7z"></path>
+                </svg>
+                <span>Python</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <path d="M16 8v8a2 2 0 0 1-2 2h-1"></path>
+                  <path d="M8 15a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-1a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2"></path>
+                </svg>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Web Development -->
+          <article class="tilt-card tech-card reveal-up">
+            <div class="tech-card-head">
+              <div class="tech-card-title-group">
+                <div class="tech-category-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="card-index">02</span>
+                  <h4>Web Development</h4>
+                </div>
+              </div>
+              <span class="tech-card-badge">5 Skills</span>
+            </div>
+            <div class="tech-skills-list">
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 3l1.8 16.2L12 21l6.2-1.8L20 3H4z"></path>
+                  <path d="M7 7h10l-.5 4.5H8l.3 3.5 3.7 1 3.7-1 .3-2"></path>
+                </svg>
+                <span>HTML5</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 3l1.8 16.2L12 21l6.2-1.8L20 3H4z"></path>
+                  <path d="M16.5 7.5H7.5l.5 4.5h8l-.6 5.5-3.4 1-3.4-1-.2-2"></path>
+                </svg>
+                <span>CSS3</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <path d="M16 8v8a2 2 0 0 1-2 2h-1"></path>
+                  <path d="M8 15a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-1a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2"></path>
+                </svg>
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="12" rx="2"></rect>
+                  <line x1="8" y1="20" x2="16" y2="20"></line>
+                  <line x1="12" y1="16" x2="12" y2="20"></line>
+                </svg>
+                <span>Responsive Web Design</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="5" r="2"></circle>
+                  <circle cx="6" cy="19" r="2"></circle>
+                  <circle cx="18" cy="19" r="2"></circle>
+                  <line x1="12" y1="7" x2="6" y2="17"></line>
+                  <line x1="12" y1="7" x2="18" y2="17"></line>
+                </svg>
+                <span>DOM Manipulation</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Database -->
+          <article class="tilt-card tech-card reveal-up">
+            <div class="tech-card-head">
+              <div class="tech-card-title-group">
+                <div class="tech-category-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="card-index">03</span>
+                  <h4>Database</h4>
+                </div>
+              </div>
+              <span class="tech-card-badge">3 Skills</span>
+            </div>
+            <div class="tech-skills-list">
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <ellipse cx="12" cy="6" rx="8" ry="3"></ellipse>
+                  <path d="M4 6v8c0 1.66 3.58 3 8 3 1.5 0 2.9-.16 4-.44"></path>
+                  <path d="M20 6v5"></path>
+                  <path d="M16 15l2 2 4-4"></path>
+                </svg>
+                <span>MySQL</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <ellipse cx="12" cy="5" rx="8" ry="2.5"></ellipse>
+                  <path d="M4 5v6c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5V5"></path>
+                  <path d="M4 11v6c0 1.38 3.58 2.5 8 2.5s8-1.12 8-2.5v-6"></path>
+                </svg>
+                <span>SQL</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="6" rx="2"></rect>
+                  <rect x="3" y="15" width="18" height="6" rx="2"></rect>
+                  <circle cx="7.5" cy="6" r="1" fill="currentColor"></circle>
+                  <circle cx="7.5" cy="18" r="1" fill="currentColor"></circle>
+                  <line x1="12" y1="9" x2="12" y2="15"></line>
+                </svg>
+                <span>DBMS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Data & AI -->
+          <article class="tilt-card tech-card reveal-up">
+            <div class="tech-card-head">
+              <div class="tech-card-title-group">
+                <div class="tech-category-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a4 4 0 0 1 4 4c0 .73-.2 1.41-.54 2H18a4 4 0 0 1 4 4c0 1.85-1.28 3.42-3 3.87V18a4 4 0 0 1-4 4h-6a4 4 0 0 1-4-4v-2.13C3.28 15.42 2 13.85 2 12a4 4 0 0 1 4-4h2.54A3.98 3.98 0 0 1 8 6a4 4 0 0 1 4-4z"></path>
+                    <line x1="12" y1="9" x2="12" y2="15"></line>
+                    <line x1="9" y1="12" x2="15" y2="12"></line>
+                  </svg>
+                </div>
+                <div>
+                  <span class="card-index">04</span>
+                  <h4>Data & AI</h4>
+                </div>
+              </div>
+              <span class="tech-card-badge">5 Skills</span>
+            </div>
+            <div class="tech-skills-list">
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                  <path d="M3 3l6 6 4-4 8 8"></path>
+                </svg>
+                <span>Python Data Analysis</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="18" rx="1"></rect>
+                  <rect x="14" y="3" width="7" height="10" rx="1"></rect>
+                  <rect x="14" y="17" width="7" height="4" rx="1"></rect>
+                </svg>
+                <span>Pandas</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="8" height="8" rx="1"></rect>
+                  <rect x="13" y="3" width="8" height="8" rx="1"></rect>
+                  <rect x="3" y="13" width="8" height="8" rx="1"></rect>
+                  <rect x="13" y="13" width="8" height="8" rx="1"></rect>
+                  <path d="M7 7l10 10"></path>
+                </svg>
+                <span>NumPy</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 3v18h18"></path>
+                  <path d="M7 16c2-4 4-9 7-9 2 0 3 4 5 7"></path>
+                </svg>
+                <span>Matplotlib</span>
+              </div>
+              <div class="tech-badge magnetic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="6" cy="6" r="2.5"></circle>
+                  <circle cx="6" cy="18" r="2.5"></circle>
+                  <circle cx="18" cy="12" r="2.5"></circle>
+                  <path d="M8.5 6.8l7 4.4"></path>
+                  <path d="M8.5 17.2l7-4.4"></path>
+                  <circle cx="12" cy="12" r="1.5"></circle>
+                </svg>
+                <span>Machine Learning Basics</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="section-head">
+        <div class="section-kicker reveal-up">PROJECTS</div>
+        <h2 class="section-title reveal-text">Editable launch bays.</h2>
+      </div>
+      <div class="project-grid">
+        <!-- Live Sales Dashboard -->
+        <article class="project-card project-card-featured tilt-card reveal-up">
+          <div class="project-media dashboard-media">
+            <div class="dashboard-preview" aria-hidden="true">
+              <div class="preview-header">
+                <div class="preview-badge">
+                  <span class="pulse-dot"></span> LIVE METRICS
+                </div>
+                <div class="preview-stat">
+                  <span class="stat-label">REVENUE</span>
+                  <span class="stat-val">$128,450</span>
+                </div>
+              </div>
+              <svg class="preview-chart" viewBox="0 0 280 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ff5b2e" stop-opacity="0.45"/>
+                    <stop offset="100%" stop-color="#ff5b2e" stop-opacity="0.0"/>
+                  </linearGradient>
+                  <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#ff5b2e"/>
+                    <stop offset="50%" stop-color="#ffb15d"/>
+                    <stop offset="100%" stop-color="#70f0b7"/>
+                  </linearGradient>
+                </defs>
+                <line x1="0" y1="20" x2="280" y2="20" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
+                <line x1="0" y1="50" x2="280" y2="50" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
+                <line x1="0" y1="80" x2="280" y2="80" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
+                <path d="M0,75 Q40,30 80,48 T160,25 T220,40 T280,12 L280,90 L0,90 Z" fill="url(#chartGrad)"/>
+                <path d="M0,75 Q40,30 80,48 T160,25 T220,40 T280,12" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <circle cx="80" cy="48" r="3" fill="#ff5b2e" stroke="#fff" stroke-width="1.5"/>
+                <circle cx="160" cy="25" r="3" fill="#ffb15d" stroke="#fff" stroke-width="1.5"/>
+                <circle cx="280" cy="12" r="3.5" fill="#70f0b7" stroke="#fff" stroke-width="1.5"/>
+              </svg>
+              <div class="preview-footer">
+                <span class="kpi-tag">Orders: +24%</span>
+                <span class="kpi-tag">Conversion: 4.8%</span>
+                <span class="kpi-tag">Growth: ↑ 32%</span>
+              </div>
+            </div>
+            <div class="media-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+          </div>
+
+          <div class="project-tag-wrap">
+            <span class="project-badge">FEATURED PROJECT</span>
+            <span class="project-status"><span class="pulse-dot"></span> LIVE</span>
+          </div>
+
+          <h3>Live Sales Dashboard</h3>
+          <p>An interactive sales dashboard that displays sales performance, revenue, orders, and product statistics using dynamic data visualization.</p>
+          
+          <div class="project-features">
+            <span class="feature-item">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              Live / Dynamic Sales Data
+            </span>
+            <span class="feature-item">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              Revenue &amp; Sales Statistics
+            </span>
+            <span class="feature-item">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              Interactive Charts
+            </span>
+            <span class="feature-item">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              Product Tracking
+            </span>
+          </div>
+
+          <div class="project-tech-stack">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">SQL / Supabase</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://dashboard-six-kohl-25.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary magnetic" aria-label="Live Demo for Live Sales Dashboard">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              <span>Live Demo</span>
+              <span class="btn-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/Vanshvarshney20/Dashboard" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary magnetic" aria-label="GitHub Repository for Live Sales Dashboard">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+              <span class="btn-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECTS -->
+        <article class="project-card tilt-card reveal-up">
+          <div class="project-media"></div>
+          <span>PROJECT 01</span>
+          <h3>Project Name</h3>
+          <p>Project Description</p>
+          <small>Technologies</small>
+          <b aria-hidden="true">→</b>
+        </article>
+        <article class="project-card tilt-card reveal-up">
+          <div class="project-media"></div>
+          <span>PROJECT 02</span>
+          <h3>Project Name</h3>
+          <p>Project Description</p>
+          <small>Technologies</small>
+          <b aria-hidden="true">→</b>
+        </article>
+        <article class="project-card tilt-card reveal-up">
+          <div class="project-media"></div>
+          <span>PROJECT 03</span>
+          <h3>Project Name</h3>
+          <p>Project Description</p>
+          <small>Technologies</small>
+          <b aria-hidden="true">→</b>
+        </article>
+      </div>
+    </section>
+
+    <section class="certifications section" id="certifications">
+      <div class="section-head">
+        <div class="section-kicker reveal-up">CERTIFICATIONS</div>
+        <h2 class="section-title reveal-text">Validated momentum.</h2>
+      </div>
+      <div class="cert-list">
+        <!-- CERTIFICATIONS -->
+        <article class="cert-card tilt-card reveal-up">
+          <span class="cert-number">01</span>
+          <div>
+            <h3>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h3>
+            <p>Oracle University</p>
+          </div>
+          <time>October 2025</time>
+          <b aria-hidden="true">→</b>
+        </article>
+        <article class="cert-card tilt-card reveal-up">
+          <span class="cert-number">02</span>
+          <div>
+            <h3>Azure Fundamentals (AZ-900)</h3>
+            <p>Microsoft</p>
+          </div>
+          <time>May 2026</time>
+          <b aria-hidden="true">→</b>
+        </article>
+      </div>
+    </section>
+
+    <section class="education section" id="education">
+      <div class="section-head">
+        <div class="section-kicker reveal-up">EDUCATION</div>
+        <h2 class="section-title reveal-text">Academic trajectory.</h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="timeline-progress" id="timeline-progress"></div>
+        <article class="timeline-item reveal-up">
+          <time>CURRENT</time>
+          <h3>Graduation</h3>
+          <p>GLA University</p>
+          <strong>Pursuing</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-orb" aria-hidden="true"></div>
+      <div class="contact-content">
+        <p class="section-kicker reveal-up">CONTACT</p>
+        <h2 class="contact-title reveal-text">
+          <span>LET'S BUILD</span>
+          <span>SOMETHING</span>
+          <span>TOGETHER.</span>
+        </h2>
+        <!-- SOCIAL LINKS -->
+        <div class="contact-links reveal-up">
+          <a class="magnetic" href="mailto:vanshvarshney0198@gmail.com">Email
+            <span>vanshvarshney0198@gmail.com</span></a>
+          <a class="magnetic" href="https://www.linkedin.com/in/vansh-varshney-51b070383" target="_blank"
+            rel="noreferrer">LinkedIn <span>vansh-varshney-51b070383</span></a>
+        </div>
+        <a class="send-button magnetic" href="mailto:vanshvarshney0198@gmail.com">SEND MESSAGE <span
+            aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>VANSH VARSHNEY</strong>
+      <span>ASPIRING SOFTWARE DEVELOPER</span>
+    </div>
+    <p>© 2026 VANSH VARSHNEY</p>
+    <nav aria-label="Footer links">
+      <a href="https://www.linkedin.com/in/vansh-varshney-51b070383" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:vanshvarshney0198@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
