@@ -7,6 +7,11 @@ A modern, responsive, high-performance personal portfolio website for **Vansh Va
 - **Interactive 3D Elements**: Particle canvas, interactive 3D sphere, and 3D tilt cards.
 - **Magnetic Physics & Custom Cursor**: Custom cursor dot and magnetic hover animations.
 - **Featured Projects**: Includes interactive project cards such as the **Live Sales Dashboard** with dynamic charts and metrics preview.
+- **Certifications Showcase**: Dedicated interactive credentials showcase featuring:
+  - **Gemini for Google Workspace** (Simplilearn SkillUp / Google Cloud)
+  - **Oracle Cloud Infrastructure 2025 Certified Generative AI Professional** (Oracle)
+  - **Azure Fundamentals** (Microsoft) with Certiport online verification (`4sn8-XMSn`)
+  - Full-screen responsive lightbox modal with backdrop dismiss and keyboard Escape support.
 - **Responsive Layout**: Optimized for desktop, tablet, and mobile screens.
 
 ## 🛠️ Built With

@@ -19,7 +19,7 @@ if (!isTouch) {
     pointer.active = true;
   });
 
-  document.querySelectorAll("a, button, .tilt-card, .hero-visual, .tech-badge").forEach((item) => {
+  document.querySelectorAll("a, button, .tilt-card, .hero-visual, .tech-badge, .cert-preview-container").forEach((item) => {
     item.addEventListener("mouseenter", () => cursor.classList.add("is-hovering"));
     item.addEventListener("mouseleave", () => cursor.classList.remove("is-hovering"));
   });
@@ -313,3 +313,96 @@ resizeAll();
 createSphere();
 updateScrollEffects();
 animate();
+
+/* 10. Certificate Modal / Lightbox */
+const certModal = document.getElementById("cert-modal");
+const certModalBackdrop = document.getElementById("cert-modal-backdrop");
+const certModalClose = document.getElementById("cert-modal-close");
+const modalCertImg = document.getElementById("modal-cert-img");
+const modalCertTitle = document.getElementById("modal-cert-title");
+const modalCertIssuer = document.getElementById("modal-cert-issuer");
+const modalCertDate = document.getElementById("modal-cert-date");
+const modalCertRecipient = document.getElementById("modal-cert-recipient");
+const modalCertLink = document.getElementById("modal-cert-link");
+
+let lastFocusedElement = null;
+
+function openCertModal(data) {
+  if (!certModal) return;
+  
+  lastFocusedElement = document.activeElement;
+  
+  if (data.src && modalCertImg) {
+    modalCertImg.src = data.src;
+    modalCertImg.alt = `${data.title || "Certificate"} - ${data.recipient || "Vansh Varshney"}`;
+  }
+  if (data.title && modalCertTitle) modalCertTitle.textContent = data.title;
+  if (data.issuer && modalCertIssuer) modalCertIssuer.textContent = data.issuer;
+  if (data.date && modalCertDate) modalCertDate.textContent = data.date;
+  if (data.recipient && modalCertRecipient) modalCertRecipient.textContent = data.recipient;
+  if (data.src && modalCertLink) modalCertLink.href = data.src;
+
+  certModal.classList.add("is-open");
+  certModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+
+  if (certModalClose) {
+    certModalClose.focus();
+  }
+}
+
+function closeCertModal() {
+  if (!certModal) return;
+  
+  certModal.classList.remove("is-open");
+  certModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+
+  if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+    lastFocusedElement.focus();
+  }
+}
+
+// Trigger listeners for modal
+document.querySelectorAll(".btn-view-cert, .cert-view-btn, .cert-preview-container").forEach((trigger) => {
+  const handleOpen = (e) => {
+    e.preventDefault();
+    const src = trigger.getAttribute("data-cert-src") || "assets/images/gemini-certificate.png";
+    const title = trigger.getAttribute("data-cert-title") || "Gemini for Google Workspace";
+    const issuer = trigger.getAttribute("data-cert-issuer") || "Simplilearn SkillUp / Google Cloud";
+    const date = trigger.getAttribute("data-cert-date") || "22 September 2025";
+    const recipient = trigger.getAttribute("data-cert-recipient") || "Vansh Varshney";
+
+    openCertModal({ src, title, issuer, date, recipient });
+  };
+
+  trigger.addEventListener("click", handleOpen);
+  trigger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handleOpen(e);
+    }
+  });
+});
+
+if (certModalClose) {
+  certModalClose.addEventListener("click", closeCertModal);
+}
+
+if (certModalBackdrop) {
+  certModalBackdrop.addEventListener("click", closeCertModal);
+}
+
+if (certModal) {
+  certModal.addEventListener("click", (e) => {
+    if (e.target === certModal) {
+      closeCertModal();
+    }
+  });
+}
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && certModal && certModal.classList.contains("is-open")) {
+    closeCertModal();
+  }
+});
+
